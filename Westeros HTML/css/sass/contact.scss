@@ -1,0 +1,124 @@
+#contact-wrap {
+	background-color: #fff;
+}
+
+#contact {
+	padding: 60px 0 50px;
+	overflow: hidden;
+	background: url('../images/devil-monster.png') no-repeat 0 60px;
+}
+
+#map {
+	height: 400px;
+}
+
+.contact-form {
+	float: right;
+	width: 870px / 1170px * 100%;
+	
+	h3.title {
+		margin-top: -6px;
+	}
+
+	.contact-details {
+		float: left;
+		width: 300px / 870px * 100%;
+		padding-right: 30px;
+		
+		p {
+			&:first-child {
+				margin: -5px 0 30px;
+			}
+		}
+
+		.contact-info {
+			margin-bottom: 30px;
+			
+			li {
+				margin-bottom: 20px;
+				padding-left: 30px;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+
+				p {
+					font-size: 14px / 16px * 1em;
+					
+					a {
+						color: $paragraph;
+						
+						&:hover {
+							color: $brand;
+						}
+					}
+				}
+
+				.svg-pin {
+					width: 14px;
+					height: 19px;
+				}
+
+				.svg-phone {
+					width: 15px;
+					height: 20px;
+				}
+
+				.svg-envelope {
+					width: 18px;
+					height: 12px;
+				}
+			}
+		}
+
+		.social-links {
+			width: 240px;
+			margin-top: 15px;
+		}
+	}
+
+	.featured-form {
+		float: right;
+		width: 570px / 870px * 100%;
+		
+		textarea {
+			height: 110px;
+		}
+
+		button {
+			width: 229px;
+			margin-top: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	#contact {
+		background: none;
+	}
+
+	.contact-form {
+		float: none;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.contact-form {
+		.contact-details {
+			float: none;
+			width: 100%;
+			margin-bottom: 40px;
+		}
+
+		.featured-form {
+			float: none;
+			width: 100%;
+
+			button {
+				float: none;
+				margin: 20px auto 0;
+			}
+		}
+	}
+}

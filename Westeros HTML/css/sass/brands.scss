@@ -1,0 +1,102 @@
+#brands-wrap {
+	background-color: $body-bg;
+}
+
+#brands {
+	min-height: 225px;
+	padding-bottom: 100px;
+	position: relative;
+	
+	h3 {
+		margin: 5px 0 45px;
+	}
+
+	ul.slide-controls {
+		position: absolute;
+		top: -5px;
+		right: 0;
+	}
+}
+
+ul.brands-list {
+	& li {
+		float: left;
+		position: relative;
+
+		a {
+			display: block;
+			
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				@include transition(opacity, .3s, ease);
+			}
+
+			img[alt="brand-over"] {
+				opacity: 0;
+			}
+
+			&:hover img[alt="brand-over"] {
+				opacity: 1;
+			}
+		}
+		
+		&:nth-child(1) {
+			margin-right: 87px;
+			
+			a {
+				width: 168px;
+				height: 43px;
+			}
+		}
+
+		&:nth-child(2) {
+			margin-right: 102px;
+			
+			a {
+				width: 161px;
+				height: 30px;
+			}
+		}
+
+		&:nth-child(3) {
+			margin-right: 98px;
+			
+			a {
+				width: 154px;
+				height: 34px;
+			}
+		}
+
+		&:nth-child(4) {
+			margin-right: 112px;
+			
+			a {
+				width: 136px;
+				height: 34px;
+			}
+		}
+
+		&:nth-child(5) {		
+			a {
+				width: 150px;
+				height: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#brands {
+		h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		ul.slide-controls {
+			position: static;
+			margin: 0 auto 25px;
+		}
+	}
+}

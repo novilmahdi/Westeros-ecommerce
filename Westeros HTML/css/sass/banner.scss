@@ -1,0 +1,237 @@
+#banner-wrap {
+	background: url('../images/banner-bg.jpg') no-repeat center;
+	background-size: cover;
+}
+
+#banner {
+	min-height: 443px;
+	padding-top: 70px;
+	position: relative;
+	
+	.main-promo {
+		float: left;
+		padding-left: 70px;
+		
+		h2 {
+			font-size: 23px / 16px * 1em;
+			line-height: 50px;
+			text-align: center;
+			
+			span {
+				font-size: 80px / 23px * 1em;
+			}
+		}
+
+		p {
+			width: 465px;
+			margin: 10px 0 25px;
+			color: #fff;
+			font-weight: $normal;
+			text-align: center;
+		}
+
+		a.button {
+			width: 190px;
+			margin: 0 auto;
+		}
+	}
+
+	.speech-bubble {
+		width: 106px;
+		height: 135px;
+		background: url('../images/speech-bubble2.png') no-repeat center;
+		position: absolute;
+		top: 45px;
+		right: 427px;
+		-webkit-animation: popmsg .4s linear forwards;
+				animation: popmsg .4s linear forwards;
+		animation-delay: .6s;
+		opacity: 0;
+		
+		h4 {
+			font-size: 72px / 16px * 1em;
+			text-transform: uppercase;
+			position: absolute;
+			top: 19px;
+			left: 25px;
+		}
+	}
+
+	.moustache-monster {
+		width: 301px;
+		height: 334px;
+		position: absolute;
+		top: 53px;
+		right: 183px;
+		z-index: 5;
+		overflow: hidden;
+	}
+
+	.moustache-shadow {
+		width: 228px;
+		height: 26px;
+		background: url('../images/monster-shadow.png') no-repeat center;
+		position: absolute;
+		right: 220px;
+		bottom: 45px;
+	}
+
+	img[alt="monster"] {
+		-webkit-animation: movemonster .8s ease;
+				animation: movemonster .8s ease;
+	}
+
+	#stars { 
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 510px;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.star {
+	    position: absolute;
+	    background-position: 50% 50%;
+	    background-repeat: no-repeat;
+	   	opacity: 0;
+	    
+	    &.small {
+	    	width: 35px;
+	    	height: 35px;
+	    	top: 258px;
+	    	right: 478px;
+	    	background-image: url('../images/star-small.png');
+	    	-webkit-animation: movestar .6s linear forwards, rotatestar 1s ease-in-out;
+	    			animation: movestar .6s linear forwards, rotatestar 1s ease-in-out;
+	    	animation-delay: .6s;
+	    }
+
+	    &.medium {
+	    	width: 53px;
+	    	height: 55px;
+	    	top: 80px;
+	    	right: 180px;
+	    	background-image: url('../images/star-medium.png');   		    
+	    	-webkit-animation: movestar .8s linear forwards, rotatestar 1s ease-in-out;
+	    			animation: movestar .8s linear forwards, rotatestar 1s ease-in-out;
+	    	animation-delay: .6s;
+	    }
+
+	    &.large {
+	    	width: 70px;
+	    	height: 71px;
+	    	top: 240px;
+	    	right: 85px;
+	    	background-image: url('../images/star-large.png');
+	    	-webkit-animation: movestar .8s linear forwards, rotatestar 1s ease-in-out;
+	    			animation: movestar .8s linear forwards, rotatestar 1s ease-in-out;
+	    	animation-delay: .6s;
+	    }
+	}
+}
+
+@include keyframes(movestar) {
+	0% {
+		top: 205px;
+		right: 335px;
+		opacity: 0;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	70% {
+		
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+
+@include keyframes(rotatestar) {
+	0% {
+		@include transform_rotate(0deg);
+	}
+	100% {
+		@include transform_rotate(360deg);
+	}
+}
+
+@include keyframes(movemonster) {
+	0% {
+		opacity: 0;
+		transform: translate(0, 434px) scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: translate(0, 0) scale(1);
+	}
+}
+
+@include keyframes(popmsg) {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+		-webkit-transform: scale(0);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+		-webkit-transform: scale(1);
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	#banner {
+		min-height: 410px;
+		
+		#banner-monster {
+			display: none;
+		}
+
+		.main-promo {
+			float: none;
+			padding-left: 0;
+			
+			p {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#banner {
+		min-height: 380px;
+		
+		.main-promo {
+			h2 {
+				font-size: 1em;
+				line-height: 40px;
+			}
+
+			p {
+				width: 80%;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	#banner {
+		padding-top: 60px;
+		
+		.main-promo {
+			h2 {
+				font-size: 13px / 16px * 1em;
+				line-height: 35px;
+			}
+
+			p {
+				width: 90%;
+			}
+		}
+	}
+}

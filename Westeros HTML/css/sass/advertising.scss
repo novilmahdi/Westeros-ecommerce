@@ -1,0 +1,58 @@
+#advertising-wrap {
+	background-color: $body-bg;
+}
+
+#advertising {
+	padding: 30px 0 60px;
+	
+	.ad-box {
+		margin-bottom: 30px;
+		
+		a {
+			width: 570px / 1170px * 100%;
+			
+			&:first-child {
+				float: left;
+			}
+
+			&:last-child {
+				float: right;
+			}
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&.short {
+		padding-top: 0;
+		
+		.ad-box {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#advertising {
+		padding-bottom: 30px;
+		 
+		& > a {
+			display: none;
+		}
+
+		.ad-box {
+			margin-bottom: 0;
+			
+			a:first-child,
+			a:last-child {
+				float: none;
+			}
+
+			a:first-child img {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}

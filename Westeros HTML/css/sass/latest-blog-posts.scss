@@ -1,0 +1,33 @@
+#latest-blog-posts-wrap {
+	background-color: $body-bg;
+}
+
+#latest-blog-posts {
+	min-height: 612px;
+	padding-bottom: 60px;
+	position: relative;
+	
+	h3 {
+		margin-top: 5px;
+	}
+
+	ul.slide-controls {
+		position: absolute;
+		top: -5px;
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#latest-blog-posts {
+		h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		ul.slide-controls {
+			position: static;
+			margin: 0 auto 20px;
+		}
+	}
+}

@@ -1,0 +1,152 @@
+#billboard-wrap {
+	background-color: $body-bg;
+}
+
+#billboard {
+	min-height: 406px;
+	padding-bottom: 60px;
+	overflow: hidden;
+	
+	.accordion {
+		float: left;
+		width: 570px / 1170px * 100%;
+	}
+	
+	.sale-promo {
+		float: right;
+		width: 570px;
+		height: 282px;
+		background: url('../images/sale-promo-bg.png') no-repeat 40px 90px;
+		position: relative;
+		
+		img[alt="bunny-monster"] {
+			position: absolute;
+			bottom: 0;
+			right: 112px;
+		}
+
+		.speech-bubble {
+			width: 279px;
+			height: 272px;
+			background: url('../images/speech-bubble.png') no-repeat center;
+			
+			h4 {
+				position: absolute;
+				top: 50px;
+				left: 21px;
+				font-size: 36px / 16px * 1em;
+				@include transform_rotate(-8deg);
+			}
+
+			h4.remark {
+				top: 79px;
+				left: 41px;
+				color: #ffd200;
+				font-size: 56px / 16px * 1em;
+				@include transform_rotate(-8.5deg);
+			}
+		}
+	}
+}
+
+#bubbles { 
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.bubble {
+    position: absolute;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    
+    &.small {
+    	width: 13px;
+    	height: 14px;
+    	left: 220px;
+    	background-image: url('../images/bubble-small.png');
+	    -webkit-animation: movebubble 6s linear infinite, sideWays 3s ease-in-out infinite alternate;
+	    		animation: movebubble 6s linear infinite, sideWays 3s ease-in-out infinite alternate;
+    	
+    	&.x1 {
+    		left: 425px;
+    		-webkit-animation: movebubble 5s linear infinite, sideWays 4s ease-in-out infinite alternate;
+		    		animation: movebubble 5s linear infinite, sideWays 4s ease-in-out infinite alternate;
+    	}
+    }
+
+    &.medium {
+    	width: 22px;
+    	height: 22px;
+    	left: 450px;
+    	background-image: url('../images/bubble-medium.png');
+	    -webkit-animation: movebubble 6.5s linear infinite, sideWays 5s ease-in-out infinite alternate;
+	    		animation: movebubble 6.5s linear infinite, sideWays 5s ease-in-out infinite alternate;
+    }
+
+    &.large {
+    	width: 29px;
+    	height: 29px;
+    	left: 480px;
+    	background-image: url('../images/bubble-large.png');
+	    -webkit-animation: movebubble 7.5s linear infinite, sideWays 6s ease-in-out infinite alternate;
+	    	    animation: movebubble 7.5s linear infinite, sideWays 6s ease-in-out infinite alternate;
+    }
+}
+
+@include keyframes(movebubble) {
+  	0% { 
+        top: 100%;
+        opacity: 0;
+	}
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	100% { 
+	    top: 10%;
+	    opacity: 0;
+	}
+}
+
+@include keyframes(sideWays) {
+	0% { 
+        margin-left: 0px;
+    }
+    100% { 
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1260px) {
+	#billboard {
+		.accordion {
+			float: none;
+			width: 90%;
+			margin: 0 auto 50px;
+		}
+
+		.sale-promo {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#billboard {
+		.accordion {
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		.sale-promo {
+			display: none;
+		}
+	}
+}

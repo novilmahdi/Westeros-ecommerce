@@ -1,0 +1,21 @@
+#section-nav-wrap {
+	background-color: #fafafa;
+}
+
+#section-nav {
+	height: 40px;
+	padding-top: 12px;
+	
+	p {
+		font-size: 11px / 16px * 1em;
+		font-weight: $medium;
+		
+		a {
+			font-weight: $medium;
+			
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

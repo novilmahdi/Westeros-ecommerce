@@ -1,0 +1,33 @@
+.product-showcase-wrap {
+	background-color: $body-bg;
+}
+
+.product-showcase {
+	min-height: 592px;
+	padding-bottom: 60px;
+	position: relative;
+	
+	h3 {
+		margin-top: 5px;
+	}
+
+	ul.slide-controls {
+		position: absolute;
+		top: -5px;
+		right: 0;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.product-showcase {
+		h3 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		ul.slide-controls {
+			position: static;
+			margin: 0 auto 20px;
+		}
+	}
+}

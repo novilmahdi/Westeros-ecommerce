@@ -1,0 +1,128 @@
+#error404-wrap {
+	background-color: #fff;
+}
+
+#error404 {
+	padding: 60px 0 100px;
+	overflow: hidden;
+	
+	.error-description {
+		float: left;
+		margin-top: -18px;
+		
+		h1 {
+			margin-bottom: 15px;
+		}
+		
+		h3 {
+			width: 470px;
+			margin-bottom: 40px;
+			color: $label;
+			line-height: 32px;
+		}
+		
+		.button {
+			width: 280px;
+		}
+	}
+
+	.error-promo {
+		float: right;
+		width: 660px;
+		height: 265px;
+		background: url('../images/moustache-sad-monster.png') no-repeat 140px 7px,
+					url('../images/electric-socket.png') no-repeat 445px 55px,
+					url('../images/spark.png') no-repeat 520px 70px,
+					url('../images/spark-small.png') no-repeat 425px 125px,
+					url('../images/error-promo-bg.png') no-repeat 0 10px;
+		position: relative;
+		
+		.error-pin {
+			width: 80px;
+			height: 101px;
+			background: url('../images/speech-bubble3.png') no-repeat center;
+			padding: 24px 7px 0;
+			position: absolute;
+			top: 0;
+			left: 105px;
+			
+			h4 {
+				font-size: 31px / 16px * 1em;
+				@include transform_rotate(-15deg);
+			}
+		}
+
+		img[alt="smoke"] {
+			position: absolute;
+			top: 26px;
+			right: 215px;
+			-webkit-animation: smoke 2s ease-in-out infinite;
+			animation: smoke 2s ease-in-out infinite;
+		}
+	}
+}
+
+@include keyframes(smoke) {
+	0% {
+		opacity: 0;
+		@include transform_translate(30px, 30px);
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+		@include transform_translate(0, 0);
+	}
+}
+
+@media screen and (max-width: 1260px) {
+	#error404 {
+		.error-description {
+			float: none;
+			margin: 0 auto 50px;
+			text-align: center;
+			
+			h3 {
+				margin: 0 auto 40px;
+			}
+
+			.button {
+				margin: 0 auto;
+			}
+		}
+
+		.error-promo {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+	#error404 {
+		padding-bottom: 40px;
+		
+		.error-description {
+			h1 {
+				font-size: 70px / 16px * 1em;
+			}
+			
+			h3 {
+				width: 80%;
+				font-size: 20px / 16px * 1em;
+				line-height: 24px;
+			}
+
+			.button {
+				width: 270px;
+			}
+		}
+
+		.error-promo {
+			display: none;
+		}
+	}
+}

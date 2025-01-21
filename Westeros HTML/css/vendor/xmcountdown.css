@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------
+[Table of contents]
+
+1. General
+-------------------------------------------------------------------*/
+/***************************************/
+/* 1. GENERAL */
+/***************************************/
+.xmcountdown > div {
+	position: relative;
+	margin-right: 30px;
+}
+
+.xmcountdown > div:last-child {
+	margin-right: 0;
+}
+
+.xmcountdown > div > p.content {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	color: #fff;
+	font-size: 2.5em; /* 40px / 16px */
+	font-weight: 700;
+	text-align: center;
+	line-height: 23px;
+	text-transform: uppercase;
+}

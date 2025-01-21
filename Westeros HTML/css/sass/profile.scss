@@ -1,0 +1,237 @@
+.profile-info {
+	margin: 20px 0;
+	border: 1px solid $border;
+	border-top: none;
+	
+	.profile-header {
+		line-height: 33px;
+		border-top: 1px solid $border;
+		position: relative;
+		cursor: pointer;
+		
+		span {
+			float: left;
+			width: 25px;
+			height: 25px;
+			margin: 4px 10px 0 7px;
+			color: #fff;
+			line-height: 25px;
+			text-align: center;
+			background-color: $brand;
+			text-align: center;
+		}
+
+		svg.plus {
+			width: 12px;
+			height: 12px;
+			fill: $brand;
+			position: absolute;
+			top: 10px;
+			right: 14px;
+			
+			.vertical {
+				display: none;
+			}
+		}
+	}
+
+	.profile-data {
+		border-top: 1px solid $border;
+		padding: 35px 30px 50px;
+		overflow: hidden;
+		
+		&.full {
+			padding: 0;
+		}
+
+		.shopping-cart {
+			&:first-child {
+				border-top: none;
+			}
+		}
+		
+		.profile-column {
+			width: 395px / 870px * 100%;
+			
+			h5 {
+				font-size: 18px / 16px * 1em;
+				margin-bottom: 20px;
+			}
+
+			.fp-msg {
+				float: left;
+				margin-bottom: 8px;
+			}
+
+			p {
+				float: left;
+				margin: 8px 0 10px;
+			}
+
+			.button.login {
+				float: left;
+			}
+			
+			&:first-child {
+				float: left;
+			}
+
+			&:last-child {
+				float: right;
+			}
+		}
+		
+		.westeros-form {
+			overflow: hidden;
+			
+			& > div {
+				width: 390px / 810px * 100%;
+				margin-bottom: 25px;
+				
+				&:nth-child(odd) {
+					float: left;
+				}
+
+				&:nth-child(even) {
+					float: right;
+				}
+
+				&:nth-last-child(1),
+				&:nth-last-child(2) {
+					margin-bottom: 0;
+				}
+			}
+
+			.full-input {
+				width: 100%;
+				margin-bottom: 10px;
+				
+				p {
+					margin-bottom: 10px;
+				}
+			}
+
+			select {
+				width: 120px / 390px * 100%;
+				border: 1px solid $border;
+				border-radius: 2px;
+				height: 38px;
+				padding: 0 25px 0 6px;
+				cursor: pointer;
+				font-size: 12px / 10px * 1em;
+				
+				&#country {
+					width: 100%;
+				}
+			}
+
+			label[for="day"], label[for="month"],
+			label[for="year"] {
+				margin-right: 12px / 390px * 100%;
+				
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+
+			.svg-arrow.select-arrow {
+				position: absolute;
+				top: 4px;
+				right: 12px;
+			}
+
+			label[for="male"] {
+				margin-right: 15px;
+			}
+
+			textarea {
+				height: 110px;
+				margin-bottom: 10px;
+			}
+
+			.gender {
+				label:first-child {
+					margin-bottom: 18px;
+				}
+			}
+		}
+	}
+}
+
+.profile-button {
+	float: right;
+	width: 250px;
+	cursor: pointer;
+}
+
+.checkout-button {
+	width: 365px;
+	height: 70px;
+	margin: 30px auto 0;
+	border-bottom-width: 5px;
+	font-size: 25px / 16px * 1em;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1160px) {
+	.profile-button {
+		float: none;
+		margin: 30px auto 0;
+	}
+}
+
+
+@media screen and (max-width: 860px) {
+	.profile-info {
+		.profile-data {
+			.profile-column {
+				float: none;
+				width: 100%;
+				
+				&:first-child {
+					margin-bottom: 40px;
+				}
+				
+				.fp-msg {
+					float: none;
+				}
+
+				.button.login {
+					float: none;
+				}
+			}
+
+			.westeros-form {
+				float: none;
+				
+				& > div {
+					width: 100%;
+					
+					&:last-child {
+						margin-top: 25px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	.profile-info {
+		.profile-data {
+			.westeros-form {
+				label[for="day"], label[for="month"],
+				label[for="year"] {
+					margin-right: 10px / 390px * 100%;
+				}
+			}
+
+			.button.login {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+

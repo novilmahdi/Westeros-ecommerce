@@ -1,0 +1,131 @@
+#register-login-wrap {
+	background-color: #fff;
+}
+
+#register-login {
+	padding: 60px 0;
+	overflow: hidden;
+	
+	.featured-form {
+		float: left;
+		width: 570px / 1170px * 100%;
+		overflow: hidden;
+		
+		&:last-child {
+			float: right;
+		}
+
+		button {
+			&.login {
+				margin-top: 15px;
+				clear: both;
+			}
+		}
+	}
+}
+
+.featured-form {	
+	h3 {
+		padding-bottom: 15px;
+		margin-bottom: 25px;
+		border-bottom: 1px solid $border;
+	}
+
+	.rl-label {
+		display: block;
+		color: $title;
+		font-size: 12px / 16px * 1em;
+		margin-bottom: 10px;
+		cursor: auto;
+		
+		&.required {
+			&:after {
+				content: '*';
+				color: $brand;
+				margin-left: 3px;
+			}
+		}
+	}
+
+	input[type="text"] {
+		margin-bottom: 22px;
+				
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	textarea {
+		color: #808080;
+		font-family: $paragraph-font;
+		font-size: 12px;
+	}
+
+	.fp-msg {
+		float: right;
+		margin-top: 7px;
+	}
+
+	button {
+		float: right;
+		margin-top: 8px;
+		
+		&.register {
+			width: 252px;
+			background-color: $button-register;
+			border-bottom-color: $button-register-border;
+			
+			&:hover {
+				background-color: $button-register-hover;
+			}
+		}
+
+		&.login {
+			width: 165px;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	#register-login {
+		.featured-form {
+			float: none;
+			width: 100%;
+			
+			&:first-child {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 620px) {
+	#register-login {
+		.featured-form {
+			label[for="remember"] {
+				float: left;
+			}
+
+			.fp-msg {
+				float: left;
+				clear: left;
+				margin: 15px 0 20px;	
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 460px) {
+	#register-login {
+		.featured-form {
+			.fp-msg {
+				margin-bottom: 35px;	
+			}
+
+			button {
+				float: none;
+				margin: 8px auto 0;
+			}
+		}
+	}
+}
